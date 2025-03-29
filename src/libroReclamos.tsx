@@ -42,7 +42,9 @@ export default function NavbarCarrusel() {
         <li className="hover:text-blue-600 cursor-pointer">Productos</li>
         <li className="hover:text-blue-600 cursor-pointer">Contacto</li>
         </ul>
+        
     </div>
+
     )}
     </nav>
 }
