@@ -25,8 +25,10 @@ const scrollToSection = (id: string) => {
 
   
   return (
+    
     <div className="w-full">
       {/* Navbar */}
+                {/* Mejorar*/}
       <nav className="bg-white shadow-md fixed top-0 w-full z-50">
         <div className="container mx-auto flex justify-between items-center p-4">
           {/* Logo y búsqueda */}
