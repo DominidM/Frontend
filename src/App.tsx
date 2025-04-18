@@ -1,17 +1,20 @@
-// App.tsx
-import { Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import NotFound from './pages/NotFound';
-import './styles/app.css';
+import { Outlet } from 'react-router-dom';
+import { Navbar } from './components/Navbar';
+import { Carousel } from "@/components/Carousel";
+import { WhatsAppButton } from './components/WhatsAppButton'; // Importa el botón de WhatsApp
+import { Footer } from './components/Footer'; // Importa el botón de WhatsApp
+
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="*" element={<NotFound />} />
-      </Route>
-    </Routes>
+    <div className="min-h-screen bg-gray-100">
+    <Navbar />
+     <Carousel /> 
+     <main className="p-4">
+        <Outlet />
+      </main>
+      <WhatsAppButton /> {/* Renderiza el botón de WhatsApp fuera del main */}
+      <Footer /> 
+    </div>
   );
 }
