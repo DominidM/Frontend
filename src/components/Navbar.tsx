@@ -1,15 +1,18 @@
 import { useState } from "react";
 import { ShoppingCart } from "lucide-react";
+import { Link } from 'react-router-dom'; // Importa Link
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full bg-white shadow-md border-t-4 border-blue-500">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <header className="w-full bg-white shadow-md border-t-[6px] border-[#376BA0]">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between ">
         {/* Logo con borde derecho */}
-        <div className="flex items-center space-x-2 border-r-2 border-blue-500 pr-4"> {/* Agregamos border-r-2 border-blue-500 pr-4 */}
-          <img src="/logo-whc.png" className="h-8 w-auto" />
+        <div className="flex items-center space-x-1 border-r-2 border-[#376BA0] pr-4">
+          <Link to="/"> {/* Enlace a la página principal */}
+            <img src="/logo.png" className="h-10 w-auto" alt="Logo WHC" />
+          </Link>
         </div>
 
         {/* Search input (desktop only) */}
@@ -23,9 +26,9 @@ export function Navbar() {
 
         {/* Navigation links (desktop only) */}
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-          <a href="#" className="hover:text-blue-500">Ofertas</a>
-          <a href="#" className="hover:text-blue-500">Productos</a>
-          <a href="#" className="hover:text-blue-500">Contacto</a>
+          <Link to="/ofertas" className="hover:text-blue-500">Ofertas</Link>
+          <Link to="/productos" className="hover:text-blue-500">Productos</Link> {/* Enlace a la página de productos */}
+          <Link to="/contacto" className="hover:text-blue-500">Contacto</Link>
         </nav>
 
         {/* Icons & Menu */}
@@ -74,9 +77,9 @@ export function Navbar() {
             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
           />
           <nav className="flex flex-col space-y-1 text-sm font-medium">
-            <a href="#" className="hover:text-blue-500">Ofertas</a>
-            <a href="#" className="hover:text-blue-500">Productos</a>
-            <a href="#" className="hover:text-blue-500">Contacto</a>
+            <Link to="/ofertas" className="hover:text-blue-500">Ofertas</Link>
+            <Link to="/productos" className="hover:text-blue-500">Productos</Link> {/* Enlace a la página de productos */}
+            <Link to="/contacto" className="hover:text-blue-500">Contacto</Link>
           </nav>
         </div>
       )}

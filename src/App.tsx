@@ -1,20 +1,22 @@
-import { Outlet } from 'react-router-dom';
-import { Navbar } from './components/Navbar';
-import { Carousel } from "@/components/Carousel";
-import { WhatsAppButton } from './components/WhatsAppButton'; // Importa el botón de WhatsApp
-import { Footer } from './components/Footer'; // Importa el botón de WhatsApp
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import ProductsPage from './pages/Products';
 
+import NotFoundPage from './pages/NotFound';
+import Layout from './layouts/Layout';
 
-export default function App() {
+const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
-    <Navbar />
-     <Carousel /> 
-     <main className="p-4">
-        <Outlet />
-      </main>
-      <WhatsAppButton /> {/* Renderiza el botón de WhatsApp fuera del main */}
-      <Footer /> 
-    </div>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/productos" element={<ProductsPage />} />
+
+      </Route>
+
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
   );
-}
+};
+
+export default App;

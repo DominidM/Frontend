@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import { BsWhatsapp } from 'react-icons/bs'; // Importa el icono de WhatsApp de una librería como react-icons
 
 export function Footer() {

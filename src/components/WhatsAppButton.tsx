@@ -1,4 +1,3 @@
-import React from 'react';
 import { BsWhatsapp } from 'react-icons/bs';
 
 export function WhatsAppButton() {

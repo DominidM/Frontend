@@ -2,11 +2,12 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
-  "/assets/Ruleta1.webp",
-  "/assets/Ruleta2.webp",
-  "/assets/Ruleta3.webp",
-  "/assets/Ruleta4.webp"
+  { src: "/assets/Ruleta1.webp", text: "elegante y moderno" },
+  { src: "/assets/Ruleta2.webp", text: "calidad garantizada" },
+  { src: "/assets/Ruleta3.webp", text: "lo mejor para ti" },
+  { src: "/assets/Ruleta4.webp", text: "comunidad y elegancia" },
 ];
+
 export function Carousel() {
   const [current, setCurrent] = useState(0);
 
@@ -19,36 +20,46 @@ export function Carousel() {
   };
 
   return (
-    <div className="relative w-full max-w-7xl mx-auto overflow-hidden">
-      {/* Imagen actual */}
+    <div className="relative w-full max-w-7xl mx-auto mt-4 rounded-lg overflow-hidden shadow-lg">
+      {/* Imagen con altura fija */}
       <img
-        src={images[current]}
+        src={images[current].src}
         alt={`Slide ${current}`}
-        className="w-full h-auto object-cover transition duration-500 rounded-lg"
+        className="w-full h-[360px] object-cover transition duration-500"
       />
 
-      {/* Botón izquierdo */}
+      {/* Difuminado inferior */}
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+      {/* Cuadro de texto decorativo superpuesto - Ajustado a la izquierda */}
+      <div className="absolute bottom-6 left-0 bg-[#0d3c6b] text-white px-8 py-3 rounded-md shadow-lg text-lg font-semibold">
+        {images[current].text}
+      </div>
+
+      {/* Línea azul debajo del difuminado */}
+      <div className="absolute bottom-0 left-0 w-full h-2 bg-[#0d3c6b]"></div>
+
+      {/* Flechas */}
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-700 rounded-full p-2 shadow"
+        className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/70 hover:bg-white text-gray-700 rounded-full p-2 shadow"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
 
-      {/* Botón derecho */}
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-700 rounded-full p-2 shadow"
+        className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/70 hover:bg-white text-gray-700 rounded-full p-2 shadow"
       >
         <ChevronRight className="w-6 h-6" />
       </button>
 
       {/* Indicadores */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {images.map((_, index) => (
           <div
             key={index}
-            className={`w-2 h-2 rounded-full ${
+            className={`w-2.5 h-2.5 rounded-full ${
               index === current ? "bg-blue-500" : "bg-gray-300"
             }`}
           />
