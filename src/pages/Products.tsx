@@ -1,5 +1,7 @@
 import React from 'react';
 import { Carousel } from "@/components/Carousel";
+import { Publicidad } from '../components/Publicidad';
+import  Marcas from '../components/Marcas'; // Importa el nuevo componente
 
 const ProductsPage: React.FC = () => {
   return (
@@ -46,7 +48,8 @@ const ProductsPage: React.FC = () => {
           {/* ... más productos ... */}
         </main>
       </div>
-
+      <Publicidad textoPromocional="Delivery gratis a compras mayores a 200" />
+      <Marcas/>
     </div>
   );
 };
