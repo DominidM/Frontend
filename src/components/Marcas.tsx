@@ -8,11 +8,12 @@ interface Marca {
 const Marcas: React.FC = () => {
     const marcas: Marca[] = [
         { nombre: 'Sloan', logoSrc: '/marca1.png' },
-        { nombre: 'Trebol', logoSrc: '/marca2.png' },
-        { nombre: 'Celima', logoSrc: '/marca3.png' },
-        { nombre: 'Helvex', logoSrc: '/marca4.png' },
-        { nombre: 'Marca5', logoSrc: '/marca5.jpg' },
-        { nombre: 'Marca6', logoSrc: '/marca6.jpg' },
+        { nombre: 'Genebre', logoSrc: '/marca2.jpg' },
+        { nombre: 'Vainsa', logoSrc: '/marca3.jpg' },
+        { nombre: 'Trebol', logoSrc: '/marca4.png' },
+        { nombre: 'Helvex', logoSrc: '/marca5.png' },
+        { nombre: 'Leeyes', logoSrc: '/marca6.PNG' },
+        { nombre: 'Sunmixer', logoSrc: '/marca7.jpg' },
     ];
 
     const containerRef = useRef<HTMLDivElement>(null);

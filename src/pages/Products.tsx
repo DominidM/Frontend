@@ -22,8 +22,28 @@ const ProductsPage: React.FC = () => {
               <label htmlFor="sloan" className="ml-2">Sloan</label>
             </div>
             <div>
-              <input type="checkbox" id="celima" name="marca" value="Celima" />
-              <label htmlFor="celima" className="ml-2">Celima</label>
+              <input type="checkbox" id="genebre" name="marca" value="Genebre" />
+              <label htmlFor="genebre" className="ml-2">Genebre</label>
+            </div>
+            <div>
+              <input type="checkbox" id="vainsa" name="marca" value="Vainsa" />
+              <label htmlFor="vainsa" className="ml-2">Vainsa</label>
+            </div>
+            <div>
+              <input type="checkbox" id="helvex" name="marca" value="Helvex" />
+              <label htmlFor="helvex" className="ml-2">Helvex</label>
+            </div>
+            <div>
+              <input type="checkbox" id="leeyes" name="marca" value="Leeyes" />
+              <label htmlFor="leeyes" className="ml-2">Leeyes</label>
+            </div>
+            <div>
+              <input type="checkbox" id="sunmixer" name="marca" value="Sunmixer" />
+              <label htmlFor="sunmixer" className="ml-2">Sunmixer</label>
+            </div>
+            <div>
+              <input type="checkbox" id="otros" name="marca" value="Otros" />
+              <label htmlFor="otros" className="ml-2">Otros</label>
             </div>
             {/* ... más marcas ... */}
           </div>

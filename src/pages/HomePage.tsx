@@ -1,10 +1,10 @@
 //import { Outlet } from 'react-router-dom';
 //import React from 'react';
 import { Carousel } from "../components/Carousel";
-import { OfertasSection } from '../components/OfertasSection';
-import { ImagenPrincipalConSecundarias } from '../components/PublicidadSection'; // Importa el componente
+import { OfertasSection } from '../components/Home/OfertasSection';
+import { ImagenPrincipalConSecundarias } from '../components/Home/PublicidadSection'; // Importa el componente
 import { Publicidad } from '../components/Publicidad';
-import { SeccionesProductos } from '../components/SeccionesProducto'; // Importa el nuevo componente
+import { SeccionesProductos } from '../components/Home/SeccionesProducto'; // Importa el nuevo componente
 import  Marcas from '../components/Marcas'; // Importa el nuevo componente
 
 function HomePage() {

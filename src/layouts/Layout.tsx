@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom';
-import { Navbar } from '../components/Navbar';
-import {Footer} from '../components/Footer';
-import ScrollToTopButton  from '../components/ScrollToTopButton'; // Importa el nuevo componente
-import { WhatsAppButton } from '../components/WhatsAppButton';
+import { Navbar } from '../components/Layout/Navbar';
+import {Footer} from '../components/Layout/Footer';
+import ScrollToTopButton  from '../components/Layout/ScrollToTopButton'; // Importa el nuevo componente
+import { WhatsAppButton } from '../components/Layout/WhatsAppButton';
 
 const Layout: React.FC = () => {
   return (

@@ -37,7 +37,7 @@ export function Carousel() {
       </div>
 
       {/* Línea azul debajo del difuminado */}
-      <div className="absolute bottom-0 left-0 w-full h-2 bg-[#0d3c6b]"></div>
+      <div className="absolute bottom-0 left-0 w-full h-2 bg-[#]"></div>
 
       {/* Flechas */}
       <button
