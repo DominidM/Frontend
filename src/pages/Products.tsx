@@ -45,9 +45,7 @@ const ProductsPage: React.FC = () => {
               <input type="checkbox" id="otros" name="marca" value="Otros" />
               <label htmlFor="otros" className="ml-2">Otros</label>
             </div>
-            {/* ... más marcas ... */}
           </div>
-
           <div>
             <h3 className="text-lg font-semibold mb-2">Instalación</h3>
             {/* Checkboxes para la instalación */}

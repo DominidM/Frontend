@@ -1,9 +1,19 @@
+import React from 'react';
 import { ArrowDown } from 'lucide-react';
 
 const imageUrl1 = "/assets/Ruleta1.webp";
 const imageUrl2 = "/assets/contact2.png";
 
 export const ContactHero = () => {
+    const desiredScrollOffset = 300; // Ajusta este valor en píxeles
+
+    const handleScroll = () => {
+        window.scrollBy({
+            top: desiredScrollOffset,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <div className="w-full">
             <div className="flex flex-col gap-8">
@@ -27,9 +37,9 @@ export const ContactHero = () => {
                 </div>
 
                 {/* Flecha para scroll */}
-                <a href="#scroll-target" className="mx-auto">
-                    <ArrowDown className="text-black text-4xl animate-bounce" />
-                </a>
+                <button onClick={handleScroll} className="mx-auto focus:outline-none">
+                <ArrowDown className="text-black text animate-bounce h-6 w-6" />
+                </button>
 
                 {/* Imagen 2 */}
                 <div id="scroll-target" className="relative w-full max-h-96 overflow-hidden">
@@ -49,3 +59,5 @@ export const ContactHero = () => {
         </div>
     );
 };
+
+export default ContactHero;
