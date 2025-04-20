@@ -11,7 +11,8 @@ function HomePage() {
   return (
     <div className="min-h-screen bg-gray-100">
       <Carousel />
-      <OfertasSection />
+    <OfertasSection />
+
       <ImagenPrincipalConSecundarias /> {/* Simplemente renderiza el componente */}
       <Publicidad textoPromocional="Delivery gratis a compras mayores a 200" />
       <SeccionesProductos /> {/* Renderiza el componente de productos y marcas */}

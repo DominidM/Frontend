@@ -1,5 +1,7 @@
 import React from 'react';
 import { BsWhatsapp } from 'react-icons/bs';
+import { FaBook } from 'react-icons/fa';
+import { Link } from 'react-router-dom'; // Importa el componente Link
 
 export function Footer() {
   return (
@@ -29,10 +31,14 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h6 className="text-sm font-semibold uppercase mb-6 text-gray-400">Social</h6>
+          <h6 className="text-sm font-semibold uppercase mb-6 text-gray-400">Información Legal</h6>
           <ul className="text-sm">
-            <li className="mb-3"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition duration-200">Instagram</a></li>
-            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition duration-200">Facebook</a></li>
+            <li>
+              <Link to="/libro" className="hover:text-white transition duration-200 flex items-center">
+                <FaBook className="mr-2" /> Libro de Reclamaciones
+              </Link>
+            </li>
+            <li><a href="/politicas-de-privacidad" className="hover:text-white transition duration-200">Políticas de Privacidad</a></li>
           </ul>
         </div>
       </div>

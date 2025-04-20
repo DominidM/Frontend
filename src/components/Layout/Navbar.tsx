@@ -83,7 +83,7 @@ export function Navbar() {
       <header className={navbarClasses}>
         <div className="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-1 border-r-2 border-[#376BA0] pr-4">
-            <Link to="/" onClick={handleInicioClick}>
+            <Link to="/">
               <img src="/logo.png" className="h-10 w-auto" alt="Logo WHC" />
             </Link>
           </div>
@@ -95,7 +95,7 @@ export function Navbar() {
             />
           </div>
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-            <a href="/ofertas" onClick={handleOfertasClick} className="hover:text-blue-500">Ofertas</a>
+            <Link to="/" onClick={handleInicioClick}>Ofertas</Link>
             <Link to="/productos" className="hover:text-blue-500">Catalago</Link>
             <Link to="/contacto" className="hover:text-blue-500">Contacto</Link>
           </nav>
@@ -135,7 +135,7 @@ export function Navbar() {
               className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
             />
             <nav className="flex flex-col space-y-1 text-sm font-medium">
-              <a href="/ofertas" onClick={handleOfertasClick} className="hover:text-blue-500">Ofertas</a>
+              <Link to="/" onClick={handleInicioClick}>Ofertas</Link>
               <Link to="/productos" className="hover:text-blue-500">Catalago</Link>
               <Link to="/contacto" className="hover:text-blue-500">Contacto</Link>
             </nav>

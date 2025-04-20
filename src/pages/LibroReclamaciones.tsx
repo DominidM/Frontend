@@ -5,7 +5,6 @@ import { Carousel } from "../components/Carousel";
 function LibroReclamaciones() {
     return (
       <div className="min-h-screen bg-gray-100">
-        <Carousel />
       </div>
     );
 }
