@@ -15,6 +15,7 @@ if (rootElement) {
       <CartProvider>
         <App />
       </CartProvider>
+      
       </BrowserRouter>
     </React.StrictMode>
   );

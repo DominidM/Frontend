@@ -1,6 +1,6 @@
 import React from 'react';
 
-const image1 = "/assets/contact-album1.webp"; // 816x759
+const image1 = "/assets/contact-album1.png"; // 816x759
 const image2 = "/assets/contact-album2.webp"; // 852x349
 const image3 = "/assets/contact-album3.webp"; // 852x382
 const image4 = "/assets/contact-album4.webp"; // 1701x247
