@@ -7,6 +7,7 @@ import { WhatsAppButton } from '../components/Layout/WhatsAppButton';
 const Layout: React.FC = () => {
   return (
     <>
+    
       <Navbar />
       <main className="min-h-screen px-4 py-6">
         <Outlet />
