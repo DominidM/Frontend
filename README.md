@@ -1,5 +1,7 @@
 #Front end
 
+Actulizacion para la t1
+
 # React + TypeScript + Vite
 
 Renzo cabro 
