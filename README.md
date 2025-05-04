@@ -50,15 +50,6 @@ cd ../frontend
 bun install
 ```
 
-###3. 🔧 Configuración
-Crea un archivo .env en la raíz con tus variables de entorno:
-
-env
-Copiar
-Editar
-# Variables comunes
-PORT=3000
-
 # Variables de base de datos
 DB_HOST=localhost
 DB_USER=tu_usuario
