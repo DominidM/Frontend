@@ -49,12 +49,16 @@ bun install
 cd ../frontend
 bun install
 ```
+---
+
 
 ## Variables de base de datos
 DB_HOST=localhost
 DB_USER=tu_usuario
 DB_PASSWORD=tu_contraseña
 DB_NAME=sloan_web
+
+---
 
 ### ▶️ Ejecución del Proyecto
 
@@ -73,6 +77,8 @@ bun run dev
 ```
 Por defecto, el frontend estará disponible en http://localhost:5173 y el backend en http://localhost:3000.
 
+---
+
 ### 📚 Documentación
 La carpeta docs/ contiene:
 
@@ -84,12 +90,17 @@ Manual de usuario y administrador
 
 Carga inicial de la base de datos
 
+---
+
 ### 🧪 Tests (opcional)
 Si tienes pruebas implementadas:
 
 ```bash Copiar Editar
 bun test
 ```
+
+---
+
 ### 📦 Producción
 Para producción, se recomienda compilar el frontend y servirlo desde el backend:
 
@@ -98,6 +109,8 @@ cd frontend
 bun run build
 ```
 Luego configura el backend para servir frontend/dist como estático.
+
+---
 
 ### 📌 Licencia
 Este proyecto está licenciado bajo MIT License.
