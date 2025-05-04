@@ -36,20 +36,21 @@ Editar
 ```bash
 git clone https://github.com/tu-usuario/Sloan_WebSystem.git
 cd Sloan_WebSystem
-2. Instala las dependencias
+```
+
+### 2. Instala las dependencias
 🔹 Backend
-bash
-Copiar
-Editar
+```bash Copiar Editar
 cd backend
 bun install
+```
 🔹 Frontend
-bash
-Copiar
-Editar
+```bash Copiar Editar
 cd ../frontend
 bun install
-🔧 Configuración
+```
+
+###3. 🔧 Configuración
 Crea un archivo .env en la raíz con tus variables de entorno:
 
 env
