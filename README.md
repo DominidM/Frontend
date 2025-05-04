@@ -50,30 +50,30 @@ cd ../frontend
 bun install
 ```
 
-# Variables de base de datos
+## Variables de base de datos
 DB_HOST=localhost
 DB_USER=tu_usuario
 DB_PASSWORD=tu_contraseña
 DB_NAME=sloan_web
-▶️ Ejecución del Proyecto
+
+##▶️ Ejecución del Proyecto
+
 1. Levanta la base de datos
 Asegúrate de que tu base de datos MySQL esté corriendo y el esquema sloan_web esté creado.
 
 2. Ejecuta el backend
-bash
-Copiar
-Editar
+```bash Copiar Editar
 cd backend
 bun run dev
+```
 3. Ejecuta el frontend
-bash
-Copiar
-Editar
+```bash Copiar Editar
 cd ../frontend
 bun run dev
+```
 Por defecto, el frontend estará disponible en http://localhost:5173 y el backend en http://localhost:3000.
 
-📚 Documentación
+##▶📚 Documentación
 La carpeta docs/ contiene:
 
 Diagramas de entidad-relación
@@ -84,24 +84,22 @@ Manual de usuario y administrador
 
 Carga inicial de la base de datos
 
-🧪 Tests (opcional)
+##▶🧪 Tests (opcional)
 Si tienes pruebas implementadas:
 
-bash
-Copiar
-Editar
+```bash Copiar Editar
 bun test
-📦 Producción
+```
+##📦 Producción
 Para producción, se recomienda compilar el frontend y servirlo desde el backend:
 
-bash
-Copiar
-Editar
+```bash Copiar Editar
 cd frontend
 bun run build
+```
 Luego configura el backend para servir frontend/dist como estático.
 
-📌 Licencia
+##📌 Licencia
 Este proyecto está licenciado bajo MIT License.
 
 yaml
