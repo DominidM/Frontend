@@ -36,8 +36,7 @@ export function Carousel() {
         {images[current].text}
       </div>
 
-      {/* Línea azul debajo del difuminado */}
-      <div className="absolute bottom-0 left-0 w-full h-2 bg-[#]"></div>
+     
 
       {/* Flechas */}
       <button
@@ -51,7 +50,7 @@ export function Carousel() {
         onClick={nextSlide}
         className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/70 hover:bg-white text-gray-700 rounded-full p-2 shadow"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-6 h-10" />
       </button>
 
       {/* Indicadores */}
@@ -61,6 +60,7 @@ export function Carousel() {
             key={index}
             className={`w-2.5 h-2.5 rounded-full ${
               index === current ? "bg-blue-500" : "bg-gray-300"
+
             }`}
           />
         ))}
