@@ -1,104 +1,128 @@
-# Proyecto Frontend
+# Sloan_WebSystem
 
-Este proyecto es una plantilla para iniciar rápidamente con **React**, **TypeScript** y **Vite**. Proporciona una configuración mínima para comenzar a trabajar con HMR (Hot Module Replacement) y algunas reglas de ESLint.
+Sistema web completo para la gestión y venta de productos de gasfitería. Este repositorio integra tanto el frontend (React + Vite + Tailwind) como el backend (Node.js con Bun), utilizando **MySQL** como base de datos.
 
-![React + TypeScript + Vite](https://vitejs.dev/logo.svg)
+---
 
-## Tabla de Contenidos
-- [Características](#características)
-- [Instalación](#instalación)
-- [Uso](#uso)
-- [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
+## 📁 Estructura del Proyecto
 
-## Características
-- 🛠️ Configuración mínima con **React**, **TypeScript** y **Vite**
-- 🚀 Rápido desarrollo con HMR
-- ✅ Configuración inicial de ESLint para mantener la calidad del código
-- ✨ Plugins recomendados para React:
-  - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md)
-  - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc)
+Sloan_WebSystem/
+│
+├── backend/ # Lógica del servidor (API REST)
+├── frontend/ # Interfaz pública (React + Vite)
+├── docs/ # Documentación técnica y modelo de base de datos
+├── README.md # Este archivo
+└── .env # Variables de entorno (no versionado)
 
-## Instalación
-Sigue los siguientes pasos para configurar el proyecto localmente:
+yaml
+Copiar
+Editar
 
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/DominidM/Frontend.git
-Instala las dependencias:
+---
+
+## 🚀 Requisitos Previos
+
+- [Node.js](https://nodejs.org/) instalado
+- [Bun](https://bun.sh/) instalado
+- [MySQL](https://www.mysql.com/) en ejecución
+- Un archivo `.env` configurado (ver más abajo)
+
+---
+
+## ⚙️ Instalación del Proyecto
+
+### 1. Clona el repositorio
+
+```bash
+git clone https://github.com/tu-usuario/Sloan_WebSystem.git
+cd Sloan_WebSystem
+2. Instala las dependencias
+🔹 Backend
 bash
-npm install
-Corre la aplicación:
+Copiar
+Editar
+cd backend
+bun install
+🔹 Frontend
 bash
-npm run dev
-Uso
-Explica cómo usar el proyecto con ejemplos.
+Copiar
+Editar
+cd ../frontend
+bun install
+🔧 Configuración
+Crea un archivo .env en la raíz con tus variables de entorno:
 
-Contribuciones
-Instrucciones para contribuir al proyecto.
+env
+Copiar
+Editar
+# Variables comunes
+PORT=3000
 
-Licencia
-Este proyecto está bajo la licencia MIT.
+# Variables de base de datos
+DB_HOST=localhost
+DB_USER=tu_usuario
+DB_PASSWORD=tu_contraseña
+DB_NAME=sloan_web
+▶️ Ejecución del Proyecto
+1. Levanta la base de datos
+Asegúrate de que tu base de datos MySQL esté corriendo y el esquema sloan_web esté creado.
 
-Code
-
-Si necesitas ayuda para implementar estos cambios, puedo ayudarte a escribirlos. ¿Qué opinas?
-DominidM/Frontend
-You said: me puedas dar el copia y pega
-me puedas dar el copia y pega 
-Copilot said: Aquí tienes un ejemplo de un archivo
-Aquí tienes un ejemplo de un archivo README mejorado que puedes copiar y pegar en tu repositorio:
-
-Markdown
-# Proyecto Frontend
-
-Este proyecto es una plantilla para iniciar rápidamente con **React**, **TypeScript** y **Vite**. Proporciona una configuración mínima para comenzar a trabajar con HMR (Hot Module Replacement) y algunas reglas de ESLint.
-
-![React + TypeScript + Vite](https://vitejs.dev/logo.svg)
-
-## Tabla de Contenidos
-- [Características](#características)
-- [Instalación](#instalación)
-- [Uso](#uso)
-- [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
-
-## Características
-- 🛠️ Configuración mínima con **React**, **TypeScript** y **Vite**
-- 🚀 Rápido desarrollo con HMR
-- ✅ Configuración inicial de ESLint para mantener la calidad del código
-- ✨ Plugins recomendados para React:
-  - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md)
-  - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc)
-
-## Instalación
-Sigue los siguientes pasos para configurar el proyecto localmente:
-
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/DominidM/Frontend.git
-Navega al directorio del proyecto:
+2. Ejecuta el backend
 bash
-cd Frontend
-Instala las dependencias:
+Copiar
+Editar
+cd backend
+bun run dev
+3. Ejecuta el frontend
 bash
-npm install
-Inicia el servidor de desarrollo:
-bash
-npm run dev
-Uso
-Este proyecto está diseñado para ser un punto de partida flexible para proyectos frontend. Puedes personalizar la configuración de ESLint o agregar más dependencias según las necesidades de tu proyecto.
+Copiar
+Editar
+cd ../frontend
+bun run dev
+Por defecto, el frontend estará disponible en http://localhost:5173 y el backend en http://localhost:3000.
 
-Contribuciones
-¡Las contribuciones son bienvenidas! Si deseas contribuir:
+📚 Documentación
+La carpeta docs/ contiene:
 
-Haz un fork del repositorio.
-Crea una nueva rama para tu funcionalidad o corrección de errores:
+Diagramas de entidad-relación
+
+Instrucciones de despliegue
+
+Manual de usuario y administrador
+
+Carga inicial de la base de datos
+
+🧪 Tests (opcional)
+Si tienes pruebas implementadas:
+
 bash
-git checkout -b mi-nueva-funcionalidad
-Realiza tus cambios y haz un commit:
+Copiar
+Editar
+bun test
+📦 Producción
+Para producción, se recomienda compilar el frontend y servirlo desde el backend:
+
 bash
-git commit -m "Agrega mi nueva funcionalidad"
-Envía un pull request y describe tus cambios.
-Licencia
-Este proyecto está bajo la licencia MIT. Siéntete libre de usarlo y modificarlo según tus necesidades.
+Copiar
+Editar
+cd frontend
+bun run build
+Luego configura el backend para servir frontend/dist como estático.
+
+📌 Licencia
+Este proyecto está licenciado bajo MIT License.
+
+yaml
+Copiar
+Editar
+
+---
+
+¿Te gustaría que genere este `README.md` directamente para guardarlo en tu proyecto o deseas adaptarlo tú mismo?
+
+
+
+
+
+
+
