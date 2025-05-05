@@ -13,7 +13,7 @@ export function Hero() {
   }, []);
 
   return (
-    <div className="relative w-full max-w-7xl mx-auto mt-4 rounded-xl overflow-hidden shadow-xl">
+    <div className="relative w-full max-w-7xl mx-auto rounded-xl overflow-hidden shadow-xl">
       <img
         src={images[currentImage].src}
         alt={images[currentImage].alt}
@@ -22,6 +22,8 @@ export function Hero() {
 
       {/* Difuminado inferior para el efecto visual */}
       <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/70 to-transparent" />
+       {/* Difuminado inferior para el efecto visual */}
+       <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/70 to-transparent" />
 
       {/* Línea azul decorativa */}
       <div className="absolute bottom-0 left-0 w-full h-4 bg-[#0d3c6b]" />
