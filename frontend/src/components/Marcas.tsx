@@ -18,7 +18,7 @@ const Marcas: React.FC = () => {
 
     const containerRef = useRef<HTMLDivElement>(null);
     const [scrollPosition, setScrollPosition] = useState(0);
-    const [intervalId, setIntervalId] = useState<number | null>(null);
+    const [, setIntervalId] = useState<number | null>(null);
 
     const marcaWidth = 150;
     const espacioEntreMarcas = 20;

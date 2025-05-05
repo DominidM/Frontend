@@ -25,7 +25,7 @@ export const ImagenPrincipalConSecundarias: React.FC = () => {
               src={principalImageUrl}
               alt={principalAltText}
               className="w-full h-auto object-cover"
-              style={{ aspectRatio: '792 / 759' }} // Mantener la proporción
+              style={{ aspectRatio: '792 / 727' }} // Mantener la proporción
             />
           </div>
 

@@ -27,7 +27,8 @@ export function Carousel() {
         alt={`Slide ${current}`}
         className="w-full h-[360px] object-cover transition duration-500"
       />
-
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/100 to-transparent"></div>
+      {/* Difuminado superior */}  
       {/* Difuminado inferior */}
       <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/70 to-transparent"></div>
 
@@ -43,7 +44,7 @@ export function Carousel() {
         onClick={prevSlide}
         className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/70 hover:bg-white text-gray-700 rounded-full p-2 shadow"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="w-6 h-10" />
       </button>
 
       <button
