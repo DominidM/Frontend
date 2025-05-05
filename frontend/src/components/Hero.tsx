@@ -13,19 +13,18 @@ export function Hero() {
   }, []);
 
   return (
-    <div className="relative w-full max-w-7xl mx-auto mt-2 rounded-lg overflow-hidden shadow-lg">
-        <img
-            src={images[currentImage].src}
-            alt={images[currentImage].alt}
-            className="w-full h-[100px] object-cover"
-        />
-        {/* Difuminado inferior */}
-        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/70 to-transparent"></div>
+    <div className="relative w-full max-w-7xl mx-auto mt-4 rounded-xl overflow-hidden shadow-xl">
+      <img
+        src={images[currentImage].src}
+        alt={images[currentImage].alt}
+        className="w-full h-[320px] md:h-[250px] object-cover transition-all duration-500"
+      />
 
-        {/* Línea azul debajo del difuminado */}
-        <div className="absolute bottom-0 left-0 w-full h-2 bg-[#]"></div>
+      {/* Difuminado inferior para el efecto visual */}
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/70 to-transparent" />
+
+      {/* Línea azul decorativa */}
+      <div className="absolute bottom-0 left-0 w-full h-4 bg-[#0d3c6b]" />
     </div>
-
-    
   );
 }

@@ -18,7 +18,7 @@ export const ContactHero = () => {
         <div className="w-full">
             <div className="flex flex-col gap-8">
                 {/* Imagen 1 */}
-                <div className="relative w-full max-h-96 overflow-hidden">
+                <div className="relative w-full max-h-96 rounded-xl overflow-hidden">
                     <img
                         src={imageUrl1}
                         alt="Imagen de Contacto 1"
