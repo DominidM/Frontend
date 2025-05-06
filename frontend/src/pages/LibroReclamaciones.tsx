@@ -1,7 +1,7 @@
 //import { Outlet } from 'react-router-dom';
 //import React from 'react';
 import { Hero } from "../components/Hero";
-import { LibroReclamacionesForm } from "../components/Reclamos/LibroReclamaciones";
+import  {LibroReclamacionesForm}  from "../components/Reclamos/LibroReclamaciones";
 
 function LibroReclamaciones() {
     return (

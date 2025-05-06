@@ -12,7 +12,7 @@ export function DetalleProducto() {
     <div>
         <Hero />  
 
-      
+    
       <h1>Detalle del producto: {id}</h1>
       {/* Renderiza la especificación aquí */}
       <Publicidad textoPromocional="Delivery gratis a compras mayores a 200" />

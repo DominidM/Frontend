@@ -1,7 +1,18 @@
-import { useState } from "react";
+import React, { useState } from 'react';
+// import axios from 'axios'; // No es necesario con fetch
+
+interface FormData {
+  nombre: string;
+  dni: string;
+  email: string;
+  telefono: string;
+  producto: string;
+  detalle: string;
+  acepta: boolean;
+}
 
 export function LibroReclamacionesForm() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     nombre: "",
     dni: "",
     email: "",
@@ -10,6 +21,9 @@ export function LibroReclamacionesForm() {
     detalle: "",
     acepta: false,
   });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const target = e.target;
@@ -26,20 +40,49 @@ export function LibroReclamacionesForm() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.acepta) {
       alert("Debe aceptar los términos para continuar.");
       return;
     }
 
-    console.log("Formulario enviado:", formData);
-    // Enviar datos a backend con fetch o axios
+    setLoading(true);
+    setError(null);
+    try {
+      const response = await fetch('http://localhost:8081/api/quejas', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error al enviar el reclamo: ${response.status}`);
+      }
+
+      const responseData = await response.json();
+      console.log('Reclamo enviado correctamente:', responseData);
+      alert("Reclamo enviado correctamente");
+      setFormData({
+        nombre: "",
+        dni: "",
+        email: "",
+        telefono: "",
+        producto: "",
+        detalle: "",
+        acepta: false,
+      });
+
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-  <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-white px-6 py-16">
-    <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl p-10 border border-blue-100">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-white px-6 py-16">
+      <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl p-10 border border-blue-100">
         <h2 className="text-4xl font-extrabold text-center text-blue-800 mb-8 tracking-tight">
           Libro de Reclamaciones
         </h2>
@@ -149,8 +192,9 @@ export function LibroReclamacionesForm() {
               type="submit"
               className="bg-blue-700 hover:bg-blue-800 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition duration-300 ease-in-out"
             >
-              Enviar reclamo
+              {loading ? 'Enviando...' : 'Enviar reclamo'}
             </button>
+            {error && <p className="mt-4 text-red-500">{error}</p>}
           </div>
         </form>
       </div>
