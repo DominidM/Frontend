@@ -1,6 +1,8 @@
 package com.sloan.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -11,33 +13,30 @@ public class Queja {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // La tabla tiene una columna 'fecha' de tipo TIMESTAMP
-    @Column(name = "fecha")
-    private String fecha; // Cambiado a String
+    @Column(name = "fecha", columnDefinition = "timestamp")
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss") // ISO 8601
+    private LocalDateTime fecha;
 
-    @Column(name = "nombre_queja") // Coincide con el nombre de la columna SQL
-    private String nombreQueja;    // Cambiado a nombreQueja
+    @Column(name = "nombre_queja", length = 100)
+    private String nombreQueja;
 
-    @Column(name = "dni_queja")  // Coincide con el nombre de la columna SQL
-    private String dniQueja;      // Cambiado a dniQueja
+    @Column(name = "dni_queja", length = 15)
+    private String dniQueja;
 
-    @Column(name = "correo_queja") // Coincide con el nombre de la columna SQL
-    private String correoQueja;    // Cambiado a correoQueja
+    @Column(name = "correo_queja", length = 100)
+    private String correoQueja;
 
-    @Column(name = "telefono_queja") // Coincide con el nombre de la columna SQL
-    private String telefonoQueja;    // Cambiado a telefonoQueja
+    @Column(name = "telefono_queja", length = 20)
+    private String telefonoQueja;
 
-    @Column(name = "producto_servicio")
+    @Column(name = "producto_servicio", length = 50)
     private String productoServicio;
 
     @Column(name = "texto", nullable = false, columnDefinition = "TEXT")
     private String texto;
 
-    // Constructor por defecto
-    public Queja() {
-    }
+    public Queja() {}
 
-    // Constructor con parámetros (útil para crear objetos Queja)
     public Queja(String nombreQueja, String dniQueja, String correoQueja, String telefonoQueja, String productoServicio, String texto) {
         this.nombreQueja = nombreQueja;
         this.dniQueja = dniQueja;
@@ -49,7 +48,7 @@ public class Queja {
 
     @PrePersist
     public void prePersist() {
-        this.fecha = LocalDateTime.now().toString();  // Formato ISO 8601
+        this.fecha = LocalDateTime.now();
     }
 
     // Getters y Setters
@@ -62,11 +61,11 @@ public class Queja {
         this.id = id;
     }
 
-    public String getFecha() {
+    public LocalDateTime getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(LocalDateTime fecha) {
         this.fecha = fecha;
     }
 

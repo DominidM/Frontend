@@ -46,22 +46,31 @@ export function LibroReclamacionesForm() {
       alert("Debe aceptar los términos para continuar.");
       return;
     }
-
+  
     setLoading(true);
     setError(null);
     try {
+      const dataToSend = {
+        nombreQueja: formData.nombre,
+        dniQueja: formData.dni,
+        correoQueja: formData.email,
+        telefonoQueja: formData.telefono,
+        productoServicio: formData.producto,
+        texto: formData.detalle,
+      };
+  
       const response = await fetch('http://localhost:8081/api/quejas', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(dataToSend),
       });
-
+  
       if (!response.ok) {
         throw new Error(`Error al enviar el reclamo: ${response.status}`);
       }
-
+  
       const responseData = await response.json();
       console.log('Reclamo enviado correctamente:', responseData);
       alert("Reclamo enviado correctamente");
@@ -74,10 +83,17 @@ export function LibroReclamacionesForm() {
         detalle: "",
         acepta: false,
       });
+  
+    } catch (error) { // TypeScript infiere error como unknown
+      if (error instanceof Error) {
+          setError(error.message);
+          console.error("Error al enviar el reclamo:", error);
+      } else {
+         setError("An unexpected error occurred");
+         console.error("Unexpected error", error);
+      }
+  }
 
-    } finally {
-      setLoading(false);
-    }
   };
 
   return (

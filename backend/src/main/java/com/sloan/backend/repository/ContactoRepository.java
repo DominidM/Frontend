@@ -1,5 +1,5 @@
 package com.sloan.backend.repository;
 
-public class ProductoRepository {
+public class ContactoRepository {
     
 }
