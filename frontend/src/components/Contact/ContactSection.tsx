@@ -13,9 +13,9 @@ export const ContactSection = () => {
                     <p className="text-lg">
                         Puedes comunicarte con nosotros para cotizaciones, consultas técnicas o información general.
                     </p>
-                    <p><strong>Teléfono:</strong> (01) 234-5678</p>
-                    <p><strong>Correo:</strong> contacto@sloanwebsystem.com</p>
-                    <p><strong>Dirección:</strong> Calle Ejemplo 123, Lima, Perú</p>
+                    <p><strong>Teléfono:</strong> (+51) 949790715 </p>
+                    <p><strong>Correo:</strong> whsRepresentaciones@gmail.com</p>
+                    <p><strong>Dirección:</strong> Los Rubies 295, La Victoria, Lima, Perú</p>
                     <p><strong>Horario:</strong> Lunes a Viernes de 9:00 a.m. a 6:00 p.m.</p>
                 </div>
 

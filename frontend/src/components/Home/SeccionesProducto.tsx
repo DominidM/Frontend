@@ -7,10 +7,6 @@ interface Producto {
   imagenSrc?: string;
 }
 
-interface Marca {
-  nombre: string;
-  logoSrc: string;
-}
 
 export const SeccionesProductos: React.FC = () => {
   const productosBano: Producto[] = [
@@ -30,9 +26,6 @@ export const SeccionesProductos: React.FC = () => {
     { nombre: 'Otro Lavadero 1', descripcion: 'Descripción adicional', precio: 499.99, imagenSrc: '/assets/lavadero5.jpg' },
     { nombre: 'Otro Lavadero 2', descripcion: 'Descripción adicional', precio: 799.99, imagenSrc: '/assets/lavadero6.jpg' },
   ];
-
-
-  const blueLineColor = '#0d3c6b';
 
   return (
     <div className="bg-gray-50 py-16">

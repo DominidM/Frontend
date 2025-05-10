@@ -53,9 +53,9 @@ export function Cart() {
       <h2 className="text-2xl font-bold mb-6">Carro de compras</h2>
       <div className="flex flex-col md:flex-row gap-6">
         {/* Lista de productos */}
-        <div className="flex-1 bg-white border rounded-x1 p-10 space-y-6">
+        <div className="flex-1 bg-white border rounded-x1 p-8 space-y-7">
           {cartItems.map(item => (
-            <div key={item.id} className="flex items-center gap-10 border-b pb-">
+            <div key={item.id} className="flex items-center gap-10 border-b pb-6">
               {/* Imagen del producto */}
               <img src={item.image} alt={item.name} className="w-24 h-24 bg-gray-200 rounded-md" />
               <div className="flex-1">
@@ -68,10 +68,11 @@ export function Cart() {
                 </div>
                 <label className="text-sm mt-2 block">Cant</label>
                 <select
-                  className="border rounded px-2 py-1 mt-1"
+                  className="border rounded px-2 py-1 mt1"
                   value={item.quantity}
                   onChange={e =>
                     handleQuantityChange(item.id, Number(e.target.value))
+                  
                   }
                 >
                   {[...Array(10).keys()].map(n => (

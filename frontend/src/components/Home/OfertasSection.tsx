@@ -47,7 +47,6 @@ export const OfertasSection: React.FC = () => {
   return (
     <section className="py-8">
       <div className="container mx-auto text-center relative">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">¡OFERTAS!</h2>
         <div className="overflow-hidden rounded-md shadow-sm w-full flex justify-center">
           <div
             className="flex transition-transform duration-500 ease-in-out"

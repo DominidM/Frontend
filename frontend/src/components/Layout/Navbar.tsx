@@ -48,7 +48,7 @@ export function Navbar() {
   }, []);
 
   const navbarClasses = `
-    w-full bg-white shadow-md border-t-[8px] border-[#376BA0]
+    w-full bg-white shadow-md border-t-[15px] border-[#0D3C6B]
     transition-all duration-300 ease-in-out
     ${isScrolled ? "fixed top-0 left-0 z-50" : "relative"}
   `;
@@ -69,20 +69,20 @@ export function Navbar() {
   return (
     <>
       <header className={navbarClasses}>
-        <div className="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-1 border-r-2 border-[#376BA0] pr-4">
+        <div className="max-w-7xl mx-auto px-2 py-4 flex items-center justify-between">
+          <div className="flex items-center space-x-1 border-r-2 border-[#0D3C6B] pr-10">
             <Link to="/">
-              <img src="/logo.png" className="h-10 w-auto" alt="Logo WHC" />
+              <img src="/logo.png" className="h-14 w-auto" alt="Logo WHC" />
             </Link>
           </div>
-          <div className="hidden md:flex flex-1 mx-6 max-w-md">
+          <div className="hidden md:flex flex-1 mx-2 max-w-md">
             <input
               type="text"
               placeholder="Buscar..."
-              className="w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-300"
+              className="w-full px-6 py-3 border rounded-10 shadow-sm focus:outline-none focus:ring focus:ring-blue-300"
             />
           </div>
-          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+          <nav className="hidden md:flex items-center space-x-16 text-sm font-large text-black">
             <Link to="/" onClick={handleInicioClick}>Ofertas</Link>
             <Link to="/productos" className="hover:text-blue-500">Catalago</Link>
             <Link to="/contacto" className="hover:text-blue-500">Contacto</Link>
