@@ -1,4 +1,5 @@
 //import { Outlet } from 'react-router-dom';
+//update actulizacion para prueba;
 //import React from 'react';
 import { Publicidad } from '../components/Publicidad';
 import { Hero } from "../components/Hero";
