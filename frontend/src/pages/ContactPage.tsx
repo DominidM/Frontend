@@ -1,6 +1,5 @@
 import React from 'react';
 import { ContactHero } from '../components/Contact/ContactHero';
-import { ContactAlbum } from '../components/Contact/ContactAlbum';
 import { ContactSection } from '../components/Contact/ContactSection';
 import { Publicidad } from '../components/Publicidad';
 
@@ -10,7 +9,6 @@ const ContactPage = () => {
         <div className="min-h-screen bg-gray-100">
         <ContactHero />
         <ContactSection />
-        <ContactAlbum />
         <Publicidad textoPromocional=" Mercado en linea " />  
 
         <div className="mt-8 mb-8 ml-10 mr-10 rounded-lg shadow-md"> {/* He quitado la clase mx-auto */}
