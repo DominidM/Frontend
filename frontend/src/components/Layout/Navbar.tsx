@@ -5,7 +5,7 @@ import { useCart } from '../ui/CartContext'; // Asegúrate de que la ruta a tu C
 import { ShoppingCartModal } from './ShoppingCartModal'; // Asegúrate de que la ruta a tu modal sea correcta
 
 export function Navbar() {
-  const desiredScrollOffset = 300; // Ajusta este valor en píxeles
+  const desiredScrollOffset = 480; // Ajusta este valor en píxeles
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -70,23 +70,39 @@ export function Navbar() {
     <>
       <header className={navbarClasses}>
         <div className="max-w-7xl mx-auto px-2 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-1 border-r-2 border-[#0D3C6B] pr-10">
+          <div className="flex items-center space-x-1 border-r-2 border-[#0D3C6B] pr-12">
             <Link to="/">
               <img src="/logo.png" className="h-14 w-auto" alt="Logo WHC" />
             </Link>
           </div>
-          <div className="hidden md:flex flex-1 mx-2 max-w-md">
-            <input
-              type="text"
-              placeholder="Buscar..."
-              className="w-full px-6 py-3 border rounded-10 shadow-sm focus:outline-none focus:ring focus:ring-blue-300"
-            />
+          <div className="hiddn md:flex flex-1 mx-2 max-w-md">
+           <input
+            type="text"
+            placeholder="Buscar..."
+            className="w-full px-6 py-3 border border-blue-800 rounded-10 shadow-sm focus:outline-none focus:ring focus:ring-blue-300"
+          />
           </div>
-          <nav className="hidden md:flex items-center space-x-16 text-sm font-large text-black">
-            <Link to="/" onClick={handleInicioClick}>Ofertas</Link>
-            <Link to="/productos" className="hover:text-blue-500">Catalago</Link>
-            <Link to="/contacto" className="hover:text-blue-500">Contacto</Link>
-          </nav>
+          <nav className="hidden md:flex items-center space-x-16 text-[17px] font-semibold text-black drop-shadow-sm">
+          <Link 
+            to="/" 
+            onClick={handleInicioClick} 
+            className="hover:text-blue-600 transition-colors duration-200"
+          >
+            Ofertas
+          </Link>
+          <Link 
+            to="/productos" 
+            className="hover:text-blue-600 transition-colors duration-200"
+          >
+            Catálogo
+          </Link>
+          <Link 
+            to="/contacto" 
+            className="hover:text-blue-600 transition-colors duration-200"
+          >
+            Contacto
+          </Link>
+        </nav>
           <div className="flex items-center space-x-4">
             <div onClick={openCart} className="relative cursor-pointer">
               <ShoppingCart className="h-6 w-6" />

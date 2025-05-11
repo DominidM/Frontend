@@ -45,7 +45,7 @@ export const OfertasSection: React.FC = () => {
   const ofertaWidth = itemsToShow === 1 ? '100%' : '33.333%';
 
   return (
-    <section className="py-8">
+    <section className="py-1">
       <div className="container mx-auto text-center relative">
         <div className="overflow-hidden rounded-md shadow-sm w-full flex justify-center">
           <div

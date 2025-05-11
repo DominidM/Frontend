@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react"; 
 
 const images = [
   { src: "/assets/Ruleta1.webp", text: "elegante y moderno" },
@@ -20,12 +20,12 @@ export function Carousel() {
   };
 
   return (
-    <div className="relative w-full max-w-0xl mx-auto mt-1 rounded-lg overflow-hidden shadow-lg">
+    <div className="relative w-full max-w-0xl mx-auto  rounded-lg overflow-hidden shadow-lg">
       {/* Imagen con altura fija */}
       <img
         src={images[current].src}
         alt={`Slide ${current}`}
-        className="w-full h-[500px] object-cover transition duration-500"
+        className="w-full h-[500px] object-cover transition duration-100"
       />
       <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/100 to-transparent"></div>
       {/* Difuminado superior */}  
@@ -33,7 +33,7 @@ export function Carousel() {
       <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/100 to-transparent"></div>
 
       {/* Cuadro de texto decorativo superpuesto - Ajustado a la izquierda */}
-      <div className="absolute bottom-6 left-0 bg-[#0d3c6b] text-white px-8 py-3 rounded-md shadow-lg text-lg font-semibold">
+      <div className="absolute bottom-6 left-0 bg-[#0d3c6b] text-white px-10 py-4 rounded-md  shadow-lg text-lg font-semibold">
         {images[current].text}
       </div>
     

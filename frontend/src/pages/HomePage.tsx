@@ -13,19 +13,14 @@ import Text from "../components/ui/text"; // Importa el nuevo componente de text
 function HomePage() {
   return (
     <div className="min-h-screen bg-gray-#ffffff">
-      
       <Carousel />
-   
       <Publicidad textoPromocional="¡Bienvenido a nuestra tienda online! Encuentra los mejores productos al mejor precio." />
-
       <Text
       title="OFERTAS PRINCIPALES DE LA SEMANA"
       subtitle="Aprovecha los descuentos y promociones especiales en nuestros productos destacados"
       color="#0D3C6B"
       />
-
       <OfertasSection />
-
       <ImagenPrincipalConSecundarias /> {/* Simplemente renderiza el componente */}
             <Publicidad textoPromocional="Delivery gratis a compras mayores a 200" />
       <Text
@@ -33,15 +28,14 @@ function HomePage() {
       subtitle="Encuentra los mejores productos para tu baño y cocina"
       color="#0D3C6B"
       />
-      <SeccionesProductos /> {/* Renderiza el componente de productos y marcas */}
+      <SeccionesProductos /> 
       <Text
       title="LAVADEROS"
       subtitle="Encuentra los mejores productos para tu baño y cocina"
       color="#0D3C6B"
       />
-      
+      <SeccionesProductos /> 
       <Marcas/>
-      
     </div>
   );
 }

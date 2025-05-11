@@ -5,7 +5,7 @@ const imageUrl1 = "/assets/Ruleta1.webp";
 const imageUrl2 = "/assets/contact2.png";
 
 export const ContactHero = () => {
-    const desiredScrollOffset = 405; // Ajusta este valor en píxeles
+    const desiredScrollOffset = 387; // Ajusta este valor en píxeles
 
     const handleScroll = () => {
         window.scrollBy({

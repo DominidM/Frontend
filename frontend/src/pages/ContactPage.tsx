@@ -13,8 +13,7 @@ const ContactPage = () => {
         <ContactAlbum />
         <Publicidad textoPromocional=" Mercado en linea " />  
 
-        <div>
-            <h2 className="text-3xl font-bold text-center mt-4 mb-4">Instalación de TruFlush</h2>
+        <div className="mt-8 mb-8 ml-10 mr-10 rounded-lg shadow-md"> {/* He quitado la clase mx-auto */}
             <video controls width="940" height="360" className="mx-auto rounded-lg shadow-md">
                 <source src="../assets/Sloan TruFlush Instalación  Español.mp4" type="video/mp4" />
                 Tu navegador no soporta el tag de video.
