@@ -1,7 +1,6 @@
-# Sloan_WebSystem
+# Sloan_WebSystem – Plataforma e-commerce para productos de gasfitería
 
-Sistema web completo para la gestión y venta de productos de gasfitería. Este repositorio integra tanto el frontend (React + Vite + Tailwind) como el backend (Node.js con Bun), utilizando **MySQL** como base de datos.
-
+Sloan_WebSystem es un sistema web completo de tipo e-commerce, diseñado para la gestión, venta y administración de productos de gasfitería. El sistema integra tanto el frontend orientado al cliente final como el backend destinado a la administración del negocio, estructurado bajo una arquitectura moderna y escalable.
 ---
 
 ## 📁 Estructura del Proyecto
@@ -14,19 +13,18 @@ Sloan_WebSystem/
 ├── README.md # Este archivo
 └── .env # Variables de entorno (no versionado)
 
-yaml
-Copiar
-Editar
 
 ---
 
-## 🚀 Requisitos Previos
+## 🔧 Tecnologías utilizadas
+Frontend: React + Vite + Tailwind CSS
+Interfaz pública responsiva e intuitiva, diseñada según un layout profesional (Figma), donde los usuarios pueden explorar productos, registrarse, iniciar sesión y realizar compras.
 
-- [Node.js](https://nodejs.org/) instalado
-- [Bun](https://bun.sh/) instalado
-- [MySQL](https://www.mysql.com/) en ejecución
-- Un archivo `.env` configurado (ver más abajo)
+Backend: Java Spring Boot (Maven)
+API RESTful que gestiona productos, clientes, pedidos, ventas y reportes. Incluye un panel administrativo implementado con Spring MVC y Thymeleaf para el control interno del negocio.
 
+Base de datos: PosgreSQL
+Motor relacional utilizado para el almacenamiento persistente de la información del sistema (productos, usuarios, transacciones, etc.).
 ---
 
 ## ⚙️ Instalación del Proyecto
@@ -39,11 +37,7 @@ cd Sloan_WebSystem
 ```
 
 ### 2. Instala las dependencias
-🔹 Backend
-```bash Copiar Editar
-cd backend
-bun install
-```
+
 🔹 Frontend
 ```bash Copiar Editar
 cd ../frontend
@@ -52,24 +46,13 @@ bun install
 ---
 
 
-## Variables de base de datos
-DB_HOST=localhost
-DB_USER=tu_usuario
-DB_PASSWORD=tu_contraseña
-DB_NAME=sloan_web
-
----
-
 ### ▶️ Ejecución del Proyecto
 
 1. Levanta la base de datos
 Asegúrate de que tu base de datos MySQL esté corriendo y el esquema sloan_web esté creado.
 
 2. Ejecuta el backend
-```bash Copiar Editar
-cd backend
-bun run dev
-```
+
 3. Ejecuta el frontend
 ```bash Copiar Editar
 cd ../frontend
@@ -115,7 +98,7 @@ Luego configura el backend para servir frontend/dist como estático.
 ### 📌 Licencia
 Este proyecto está licenciado bajo MIT License.
 
-
+SolveGrades.com
 ---
 
 ¿Te gustaría que genere este `README.md` directamente para guardarlo en tu proyecto o deseas adaptarlo tú mismo?
