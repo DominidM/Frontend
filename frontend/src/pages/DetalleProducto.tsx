@@ -6,7 +6,7 @@ import  Marcas from '../components/Marcas'; // Importa el nuevo componente
 export function DetalleProducto() {
   const { id } = useParams();
 
-  // Aquí puedes usar el id para hacer una llamada a la API y obtener los detalles del producto
+  // Adasdadasdquí puedes usar el id para hacer una llamada a la API y obtener los detalles del producto
   // const [producto, setProducto] = useState<Producto | null>(null);
   return (
     <div>
